@@ -8,7 +8,7 @@
   programs.zsh.enable = true;
   
   system.defaults.dock.autohide = true;
-  # system.defaults.dock.orientation = "left";
+  system.defaults.dock.orientation = "bottom";
 
   # system.keyboard.enableKeyMapping = true;
   # system.keyboard.remapCapsLockToControl = true;
@@ -51,54 +51,48 @@
 
   environment.systemPackages =
     [
+      pkgs.automake
       pkgs.awscli
+      pkgs.bash-completion
+      pkgs.bat
+      pkgs.btop
       pkgs.calc
+      pkgs.cmake
       pkgs.coreutils-full
+      pkgs.docker
+      pkgs.docker-compose
+      pkgs.dos2unix
       pkgs.fd
+      pkgs.fzf
+      pkgs.gcc
       pkgs.gdb
+      pkgs.git
+      pkgs.gnumake
+      pkgs.hack-font
+      pkgs.htop
       pkgs.jq
       pkgs.nasm
+      pkgs.ncdu
       pkgs.neovim
+      pkgs.nerdfonts
+      pkgs.nmap
       pkgs.nodejs
       pkgs.pwgen
       pkgs.python310
       pkgs.ripgrep
       pkgs.ruby_3_1
       pkgs.shellcheck
+      pkgs.silver-searcher
       pkgs.socat
+      pkgs.terminus-nerdfont
+      pkgs.tig
+      pkgs.tmate
       pkgs.tmux
       pkgs.tree
       pkgs.universal-ctags
-      pkgs.zsh-syntax-highlighting
-      pkgs.automake
-      pkgs.gcc
-      pkgs.cmake
-      pkgs.gnumake
-      pkgs.git
-      pkgs.tig
-      pkgs.tmux
-      pkgs.tmate
-      pkgs.htop
-      pkgs.btop
-      pkgs.bash-completion
-      pkgs.dos2unix
-      pkgs.jq
-      pkgs.ncdu
-      pkgs.nmap
-      pkgs.tig
-      pkgs.tree
-      pkgs.wget
       pkgs.watch
-      pkgs.nodejs
-      pkgs.fzf
-      pkgs.bat
-      pkgs.fd
-      pkgs.docker
-      pkgs.docker-compose
-      pkgs.nerdfonts
-      pkgs.hack-font
-      pkgs.terminus-nerdfont
-      pkgs.silver-searcher
+      pkgs.wget
+      pkgs.zsh-syntax-highlighting
     ];
 
 }
