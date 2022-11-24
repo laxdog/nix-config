@@ -38,61 +38,81 @@
     onActivation.upgrade = true; # updates homebrew packages on activation ,
     # can make darwin-rebuild much slower (otherwise i'd forget to do it ever though)
     casks = [
-      "discord"
-      "spotify"
       "iterm2"
       "meld"
       "visual-studio-code"
       "authy"
+      "discord"
+      "signal"
       "microsoft-teams"
+      "spotify"
+      "whatsapp"
+      "slack"
       "jiggler"
+      "dropbox"
     ];
   };
 
-  environment.systemPackages =
-    [
-      pkgs.automake
-      pkgs.awscli
-      pkgs.bash-completion
-      pkgs.bat
-      pkgs.btop
-      pkgs.calc
-      pkgs.cmake
-      pkgs.coreutils-full
-      pkgs.docker
-      pkgs.docker-compose
-      pkgs.dos2unix
-      pkgs.fd
-      pkgs.fzf
-      pkgs.gcc
-      pkgs.gdb
-      pkgs.git
-      pkgs.gnumake
-      pkgs.hack-font
-      pkgs.htop
-      pkgs.jq
-      pkgs.nasm
-      pkgs.ncdu
-      pkgs.neovim
-      pkgs.nerdfonts
-      pkgs.nmap
-      pkgs.nodejs
-      pkgs.pwgen
-      pkgs.python310
-      pkgs.ripgrep
-      pkgs.ruby_3_1
-      pkgs.shellcheck
-      pkgs.silver-searcher
-      pkgs.socat
-      pkgs.terminus-nerdfont
-      pkgs.tig
-      pkgs.tmate
-      pkgs.tmux
-      pkgs.tree
-      pkgs.universal-ctags
-      pkgs.watch
-      pkgs.wget
-      pkgs.zsh-syntax-highlighting
-    ];
+  environment.systemPackages = with pkgs; [
+    automake
+    awscli
+    bash-completion
+    bat
+    btop
+    calc
+    cmake
+    coreutils-full
+    docker
+    docker-compose
+    dos2unix
+    fd
+    fzf
+    gcc
+    gdb
+    git
+    gnumake
+    htop
+    jq
+    nasm
+    ncdu
+    neovim
+    nmap
+    nodejs
+    packer
+    pwgen
+    python310
+    ripgrep
+    ruby_3_1
+    shellcheck
+    silver-searcher
+    socat
+    terraform
+    tig
+    tmate
+    tmux
+    tmuxinator
+    tree
+    universal-ctags
+    watch
+    wget
+    zsh-syntax-highlighting
+  ];
+
+  fonts.fontDir.enable = true;
+  fonts.fonts = with pkgs; [
+    dina-font
+    fira-code
+    fira-code-symbols
+    hack-font
+    liberation_ttf
+    mplus-outline-fonts.githubRelease
+    nerdfonts
+    noto-fonts
+    noto-fonts-cjk
+    noto-fonts-emoji
+    proggyfonts
+    terminus-nerdfont
+  ];
+
 
 }
