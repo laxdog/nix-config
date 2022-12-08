@@ -50,6 +50,9 @@
       "slack"
       "jiggler"
       "dropbox"
+      "docker"
+      "nativefier"
+      "kitty"
     ];
   };
 
@@ -62,8 +65,6 @@
     calc
     cmake
     coreutils-full
-    docker
-    docker-compose
     dos2unix
     fd
     fzf
